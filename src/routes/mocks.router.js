@@ -6,7 +6,14 @@ import PetModel from '../dao/models/Pet.js';
 const router = Router();
 
 router.get('/mockingusers', async (req, res) => {
-    const mockUsers = generateMockUsers(50);
+    const mockUsers = await generateMockUsers(50);
+
+    console.log('Usuarios generados:', JSON.stringify(mockUsers, null, 2));
+
+    if (!mockUsers || mockUsers.length === 0) {
+        return res.status(404).json({ error: 'No se generaron usuarios' });
+    }
+
     res.json(mockUsers);
 });
 
