@@ -1,7 +1,1 @@
 el proyecto levanta con el comando nodemon src/app.js
-
-MONGO_URI=mongodb+srv://codertester:1234567890@clustercod.mq9qg19.mongodb.net/?retryWrites=true&w=majority&appName=ClusterCod
-
-JWT_SECRET=miClaveSuperSecreta
-
-SESSION_SECRET=clave_super_segura
